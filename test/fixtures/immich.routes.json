@@ -1,0 +1,2139 @@
+{
+ "openapi": "3.0.0",
+ "info": {
+  "title": "Route fixture (paths, methods, operationIds only)",
+  "version": "3.3.0-rc.0"
+ },
+ "paths": {
+  "/activities": {
+   "get": {
+    "operationId": "getActivities",
+    "tags": [
+     "Activities"
+    ]
+   },
+   "post": {
+    "operationId": "createActivity",
+    "tags": [
+     "Activities"
+    ]
+   }
+  },
+  "/activities/statistics": {
+   "get": {
+    "operationId": "getActivityStatistics",
+    "tags": [
+     "Activities"
+    ]
+   }
+  },
+  "/activities/{id}": {
+   "delete": {
+    "operationId": "deleteActivity",
+    "tags": [
+     "Activities"
+    ]
+   }
+  },
+  "/admin/auth/unlink-all": {
+   "post": {
+    "operationId": "unlinkAllOAuthAccountsAdmin",
+    "tags": [
+     "Authentication (admin)"
+    ]
+   }
+  },
+  "/admin/config": {
+   "get": {
+    "operationId": "getAdminConfig",
+    "tags": [
+     "Config (admin)"
+    ]
+   },
+   "put": {
+    "operationId": "updateAdminConfig",
+    "tags": [
+     "Config (admin)"
+    ]
+   }
+  },
+  "/admin/config/defaults": {
+   "get": {
+    "operationId": "getAdminConfigDefaults",
+    "tags": [
+     "Config (admin)"
+    ]
+   }
+  },
+  "/admin/database-backups": {
+   "delete": {
+    "operationId": "deleteDatabaseBackup",
+    "tags": [
+     "Database Backups (admin)"
+    ]
+   },
+   "get": {
+    "operationId": "listDatabaseBackups",
+    "tags": [
+     "Database Backups (admin)"
+    ]
+   }
+  },
+  "/admin/database-backups/start-restore": {
+   "post": {
+    "operationId": "startDatabaseRestoreFlow",
+    "tags": [
+     "Database Backups (admin)"
+    ]
+   }
+  },
+  "/admin/database-backups/upload": {
+   "post": {
+    "operationId": "uploadDatabaseBackup",
+    "tags": [
+     "Database Backups (admin)"
+    ]
+   }
+  },
+  "/admin/database-backups/{filename}": {
+   "get": {
+    "operationId": "downloadDatabaseBackup",
+    "tags": [
+     "Database Backups (admin)"
+    ]
+   }
+  },
+  "/admin/integrity/report": {
+   "get": {
+    "operationId": "getIntegrityReport",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/integrity/report/{id}": {
+   "delete": {
+    "operationId": "deleteIntegrityReport",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/integrity/report/{id}/file": {
+   "get": {
+    "operationId": "getIntegrityReportFile",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/integrity/report/{type}/csv": {
+   "get": {
+    "operationId": "getIntegrityReportCsv",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/integrity/summary": {
+   "get": {
+    "operationId": "getIntegrityReportSummary",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/maintenance": {
+   "post": {
+    "operationId": "setMaintenanceMode",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/maintenance/detect-install": {
+   "get": {
+    "operationId": "detectPriorInstall",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/maintenance/login": {
+   "post": {
+    "operationId": "maintenanceLogin",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/maintenance/status": {
+   "get": {
+    "operationId": "getMaintenanceStatus",
+    "tags": [
+     "Maintenance (admin)"
+    ]
+   }
+  },
+  "/admin/notifications": {
+   "post": {
+    "operationId": "createNotification",
+    "tags": [
+     "Notifications (admin)"
+    ]
+   }
+  },
+  "/admin/notifications/templates/{name}": {
+   "post": {
+    "operationId": "getNotificationTemplateAdmin",
+    "tags": [
+     "Notifications (admin)"
+    ]
+   }
+  },
+  "/admin/notifications/test-email": {
+   "post": {
+    "operationId": "sendTestEmailAdmin",
+    "tags": [
+     "Notifications (admin)"
+    ]
+   }
+  },
+  "/admin/users": {
+   "get": {
+    "operationId": "searchUsersAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   },
+   "post": {
+    "operationId": "createUserAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/admin/users/{id}": {
+   "delete": {
+    "operationId": "deleteUserAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   },
+   "get": {
+    "operationId": "getUserAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   },
+   "put": {
+    "operationId": "updateUserAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/admin/users/{id}/calendar-heatmap": {
+   "get": {
+    "operationId": "getUserCalendarHeatmapAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/admin/users/{id}/preferences": {
+   "get": {
+    "operationId": "getUserPreferencesAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   },
+   "put": {
+    "operationId": "updateUserPreferencesAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/admin/users/{id}/restore": {
+   "post": {
+    "operationId": "restoreUserAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/admin/users/{id}/sessions": {
+   "get": {
+    "operationId": "getUserSessionsAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/admin/users/{id}/statistics": {
+   "get": {
+    "operationId": "getUserStatisticsAdmin",
+    "tags": [
+     "Users (admin)"
+    ]
+   }
+  },
+  "/albums": {
+   "get": {
+    "operationId": "getAllAlbums",
+    "tags": [
+     "Albums"
+    ]
+   },
+   "post": {
+    "operationId": "createAlbum",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/assets": {
+   "put": {
+    "operationId": "addAssetsToAlbums",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/statistics": {
+   "get": {
+    "operationId": "getAlbumStatistics",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/{id}": {
+   "delete": {
+    "operationId": "deleteAlbum",
+    "tags": [
+     "Albums"
+    ]
+   },
+   "get": {
+    "operationId": "getAlbumInfo",
+    "tags": [
+     "Albums"
+    ]
+   },
+   "patch": {
+    "operationId": "updateAlbumInfo",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/{id}/assets": {
+   "delete": {
+    "operationId": "removeAssetFromAlbum",
+    "tags": [
+     "Albums"
+    ]
+   },
+   "put": {
+    "operationId": "addAssetsToAlbum",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/{id}/map-markers": {
+   "get": {
+    "operationId": "getAlbumMapMarkers",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/{id}/user/{userId}": {
+   "delete": {
+    "operationId": "removeUserFromAlbum",
+    "tags": [
+     "Albums"
+    ]
+   },
+   "put": {
+    "operationId": "updateAlbumUser",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/albums/{id}/users": {
+   "put": {
+    "operationId": "addUsersToAlbum",
+    "tags": [
+     "Albums"
+    ]
+   }
+  },
+  "/api-keys": {
+   "get": {
+    "operationId": "getApiKeys",
+    "tags": [
+     "API keys"
+    ]
+   },
+   "post": {
+    "operationId": "createApiKey",
+    "tags": [
+     "API keys"
+    ]
+   }
+  },
+  "/api-keys/me": {
+   "get": {
+    "operationId": "getMyApiKey",
+    "tags": [
+     "API keys"
+    ]
+   }
+  },
+  "/api-keys/{id}": {
+   "delete": {
+    "operationId": "deleteApiKey",
+    "tags": [
+     "API keys"
+    ]
+   },
+   "get": {
+    "operationId": "getApiKey",
+    "tags": [
+     "API keys"
+    ]
+   },
+   "put": {
+    "operationId": "updateApiKey",
+    "tags": [
+     "API keys"
+    ]
+   }
+  },
+  "/api-keys/{id}/rotate": {
+   "post": {
+    "operationId": "rotateApiKey",
+    "tags": [
+     "API keys"
+    ]
+   }
+  },
+  "/asset-files": {
+   "get": {
+    "operationId": "searchAssetFiles",
+    "tags": [
+     "Asset files"
+    ]
+   }
+  },
+  "/asset-files/{id}": {
+   "delete": {
+    "operationId": "deleteAssetFile",
+    "tags": [
+     "Asset files"
+    ]
+   },
+   "get": {
+    "operationId": "getAssetFile",
+    "tags": [
+     "Asset files"
+    ]
+   }
+  },
+  "/asset-files/{id}/download": {
+   "get": {
+    "operationId": "downloadAssetFile",
+    "tags": [
+     "Asset files"
+    ]
+   }
+  },
+  "/assets": {
+   "delete": {
+    "operationId": "deleteAssets",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "post": {
+    "operationId": "uploadAsset",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "put": {
+    "operationId": "updateAssets",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/bulk-upload-check": {
+   "post": {
+    "operationId": "checkBulkUpload",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/copy": {
+   "put": {
+    "operationId": "copyAsset",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/jobs": {
+   "post": {
+    "operationId": "runAssetJobs",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/metadata": {
+   "delete": {
+    "operationId": "deleteBulkAssetMetadata",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "put": {
+    "operationId": "updateBulkAssetMetadata",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/statistics": {
+   "get": {
+    "operationId": "getAssetStatistics",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}": {
+   "get": {
+    "operationId": "getAssetInfo",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "put": {
+    "operationId": "updateAsset",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/edits": {
+   "delete": {
+    "operationId": "removeAssetEdits",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "get": {
+    "operationId": "getAssetEdits",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "put": {
+    "operationId": "editAsset",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/metadata": {
+   "get": {
+    "operationId": "getAssetMetadata",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "put": {
+    "operationId": "updateAssetMetadata",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/metadata/{key}": {
+   "delete": {
+    "operationId": "deleteAssetMetadata",
+    "tags": [
+     "Assets"
+    ]
+   },
+   "get": {
+    "operationId": "getAssetMetadataByKey",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/ocr": {
+   "get": {
+    "operationId": "getAssetOcr",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/original": {
+   "get": {
+    "operationId": "downloadAsset",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/thumbnail": {
+   "get": {
+    "operationId": "viewAsset",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/video/playback": {
+   "get": {
+    "operationId": "playAssetVideo",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/video/stream/main.m3u8": {
+   "get": {
+    "operationId": "getMainPlaylist",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/video/stream/{sessionId}": {
+   "delete": {
+    "operationId": "endSession",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/video/stream/{sessionId}/{variantIndex}/playlist.m3u8": {
+   "get": {
+    "operationId": "getMediaPlaylist",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/assets/{id}/video/stream/{sessionId}/{variantIndex}/{filename}": {
+   "get": {
+    "operationId": "getSegment",
+    "tags": [
+     "Assets"
+    ]
+   }
+  },
+  "/auth/admin-sign-up": {
+   "post": {
+    "operationId": "signUpAdmin",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/change-password": {
+   "post": {
+    "operationId": "changePassword",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/login": {
+   "post": {
+    "operationId": "login",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/logout": {
+   "post": {
+    "operationId": "logout",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/pin-code": {
+   "delete": {
+    "operationId": "resetPinCode",
+    "tags": [
+     "Authentication"
+    ]
+   },
+   "post": {
+    "operationId": "setupPinCode",
+    "tags": [
+     "Authentication"
+    ]
+   },
+   "put": {
+    "operationId": "changePinCode",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/session/lock": {
+   "post": {
+    "operationId": "lockAuthSession",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/session/unlock": {
+   "post": {
+    "operationId": "unlockAuthSession",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/status": {
+   "get": {
+    "operationId": "getAuthStatus",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/auth/validateToken": {
+   "post": {
+    "operationId": "validateAccessToken",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/cluster-groups/requests": {
+   "get": {
+    "operationId": "getClusterGroupRequests",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/cluster-groups/requests/{id}": {
+   "delete": {
+    "operationId": "deleteClusterGroupRequest",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/cluster-groups/requests/{id}/accept": {
+   "post": {
+    "operationId": "acceptClusterGroupRequest",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/cluster-groups/{id}/leave": {
+   "post": {
+    "operationId": "leaveClusterGroup",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/cluster-groups/{id}/regenerate-people": {
+   "post": {
+    "operationId": "clusterGroupRegeneratePeople",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/cluster-groups/{id}/requests": {
+   "get": {
+    "operationId": "getClusterGroupRequestsForGroup",
+    "tags": [
+     "Cluster groups"
+    ]
+   },
+   "put": {
+    "operationId": "createClusterGroupRequest",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/cluster-groups/{id}/users": {
+   "get": {
+    "operationId": "getClusterGroupUsers",
+    "tags": [
+     "Cluster groups"
+    ]
+   }
+  },
+  "/config": {
+   "get": {
+    "operationId": "getUserConfig",
+    "tags": [
+     "Config (user)"
+    ]
+   }
+  },
+  "/config/defaults": {
+   "get": {
+    "operationId": "getUserConfigDefaults",
+    "tags": [
+     "Config (user)"
+    ]
+   }
+  },
+  "/download/archive": {
+   "post": {
+    "operationId": "downloadArchive",
+    "tags": [
+     "Download"
+    ]
+   }
+  },
+  "/download/info": {
+   "post": {
+    "operationId": "getDownloadInfo",
+    "tags": [
+     "Download"
+    ]
+   }
+  },
+  "/duplicates": {
+   "delete": {
+    "operationId": "deleteDuplicates",
+    "tags": [
+     "Duplicates"
+    ]
+   },
+   "get": {
+    "operationId": "getAssetDuplicates",
+    "tags": [
+     "Duplicates"
+    ]
+   }
+  },
+  "/duplicates/resolve": {
+   "post": {
+    "operationId": "resolveDuplicates",
+    "tags": [
+     "Duplicates"
+    ]
+   }
+  },
+  "/duplicates/{id}": {
+   "delete": {
+    "operationId": "deleteDuplicate",
+    "tags": [
+     "Duplicates"
+    ]
+   }
+  },
+  "/faces": {
+   "get": {
+    "operationId": "getFaces",
+    "tags": [
+     "Faces"
+    ]
+   },
+   "post": {
+    "operationId": "createFace",
+    "tags": [
+     "Faces"
+    ]
+   }
+  },
+  "/faces/{id}": {
+   "delete": {
+    "operationId": "deleteFace",
+    "tags": [
+     "Faces"
+    ]
+   },
+   "put": {
+    "operationId": "reassignFacesById",
+    "tags": [
+     "Faces"
+    ]
+   }
+  },
+  "/jobs": {
+   "get": {
+    "operationId": "getQueuesLegacy",
+    "tags": [
+     "Jobs",
+     "Deprecated"
+    ]
+   },
+   "post": {
+    "operationId": "createJob",
+    "tags": [
+     "Jobs"
+    ]
+   }
+  },
+  "/jobs/{name}": {
+   "put": {
+    "operationId": "runQueueCommandLegacy",
+    "tags": [
+     "Jobs",
+     "Deprecated"
+    ]
+   }
+  },
+  "/libraries": {
+   "get": {
+    "operationId": "getAllLibraries",
+    "tags": [
+     "Libraries"
+    ]
+   },
+   "post": {
+    "operationId": "createLibrary",
+    "tags": [
+     "Libraries"
+    ]
+   }
+  },
+  "/libraries/{id}": {
+   "delete": {
+    "operationId": "deleteLibrary",
+    "tags": [
+     "Libraries"
+    ]
+   },
+   "get": {
+    "operationId": "getLibrary",
+    "tags": [
+     "Libraries"
+    ]
+   },
+   "put": {
+    "operationId": "updateLibrary",
+    "tags": [
+     "Libraries"
+    ]
+   }
+  },
+  "/libraries/{id}/scan": {
+   "post": {
+    "operationId": "scanLibrary",
+    "tags": [
+     "Libraries"
+    ]
+   }
+  },
+  "/libraries/{id}/statistics": {
+   "get": {
+    "operationId": "getLibraryStatistics",
+    "tags": [
+     "Libraries"
+    ]
+   }
+  },
+  "/libraries/{id}/validate": {
+   "post": {
+    "operationId": "validate",
+    "tags": [
+     "Libraries"
+    ]
+   }
+  },
+  "/map/markers": {
+   "get": {
+    "operationId": "getMapMarkers",
+    "tags": [
+     "Map"
+    ]
+   }
+  },
+  "/map/reverse-geocode": {
+   "get": {
+    "operationId": "reverseGeocode",
+    "tags": [
+     "Map"
+    ]
+   }
+  },
+  "/memories": {
+   "get": {
+    "operationId": "searchMemories",
+    "tags": [
+     "Memories"
+    ]
+   },
+   "post": {
+    "operationId": "createMemory",
+    "tags": [
+     "Memories"
+    ]
+   }
+  },
+  "/memories/statistics": {
+   "get": {
+    "operationId": "memoriesStatistics",
+    "tags": [
+     "Memories"
+    ]
+   }
+  },
+  "/memories/{id}": {
+   "delete": {
+    "operationId": "deleteMemory",
+    "tags": [
+     "Memories"
+    ]
+   },
+   "get": {
+    "operationId": "getMemory",
+    "tags": [
+     "Memories"
+    ]
+   },
+   "put": {
+    "operationId": "updateMemory",
+    "tags": [
+     "Memories"
+    ]
+   }
+  },
+  "/memories/{id}/assets": {
+   "delete": {
+    "operationId": "removeMemoryAssets",
+    "tags": [
+     "Memories"
+    ]
+   },
+   "put": {
+    "operationId": "addMemoryAssets",
+    "tags": [
+     "Memories"
+    ]
+   }
+  },
+  "/notifications": {
+   "delete": {
+    "operationId": "deleteNotifications",
+    "tags": [
+     "Notifications"
+    ]
+   },
+   "get": {
+    "operationId": "getNotifications",
+    "tags": [
+     "Notifications"
+    ]
+   },
+   "put": {
+    "operationId": "updateNotifications",
+    "tags": [
+     "Notifications"
+    ]
+   }
+  },
+  "/notifications/{id}": {
+   "delete": {
+    "operationId": "deleteNotification",
+    "tags": [
+     "Notifications"
+    ]
+   },
+   "get": {
+    "operationId": "getNotification",
+    "tags": [
+     "Notifications"
+    ]
+   },
+   "put": {
+    "operationId": "updateNotification",
+    "tags": [
+     "Notifications"
+    ]
+   }
+  },
+  "/oauth/authorize": {
+   "post": {
+    "operationId": "startOAuth",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/oauth/backchannel-logout": {
+   "post": {
+    "operationId": "logoutOAuth",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/oauth/callback": {
+   "post": {
+    "operationId": "finishOAuth",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/oauth/link": {
+   "post": {
+    "operationId": "linkOAuthAccount",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/oauth/mobile-redirect": {
+   "get": {
+    "operationId": "redirectOAuthToMobile",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/oauth/unlink": {
+   "post": {
+    "operationId": "unlinkOAuthAccount",
+    "tags": [
+     "Authentication"
+    ]
+   }
+  },
+  "/partners": {
+   "get": {
+    "operationId": "getPartners",
+    "tags": [
+     "Partners"
+    ]
+   },
+   "post": {
+    "operationId": "createPartner",
+    "tags": [
+     "Partners"
+    ]
+   }
+  },
+  "/partners/{id}": {
+   "delete": {
+    "operationId": "removePartner",
+    "tags": [
+     "Partners"
+    ]
+   },
+   "post": {
+    "operationId": "createPartnerDeprecated",
+    "tags": [
+     "Partners",
+     "Deprecated"
+    ]
+   },
+   "put": {
+    "operationId": "updatePartner",
+    "tags": [
+     "Partners"
+    ]
+   }
+  },
+  "/passkeys": {
+   "get": {
+    "operationId": "searchPasskeys",
+    "tags": [
+     "Passkeys"
+    ]
+   }
+  },
+  "/passkeys/authentication/finish": {
+   "post": {
+    "operationId": "finishAuthentication",
+    "tags": [
+     "Passkeys"
+    ]
+   }
+  },
+  "/passkeys/authentication/start": {
+   "post": {
+    "operationId": "startAuthentication",
+    "tags": [
+     "Passkeys"
+    ]
+   }
+  },
+  "/passkeys/registration/finish": {
+   "post": {
+    "operationId": "finishRegistration",
+    "tags": [
+     "Passkeys"
+    ]
+   }
+  },
+  "/passkeys/registration/start": {
+   "post": {
+    "operationId": "startRegistration",
+    "tags": [
+     "Passkeys"
+    ]
+   }
+  },
+  "/passkeys/{id}": {
+   "delete": {
+    "operationId": "deletePasskey",
+    "tags": [
+     "Passkeys"
+    ]
+   },
+   "get": {
+    "operationId": "getPasskey",
+    "tags": [
+     "Passkeys"
+    ]
+   },
+   "patch": {
+    "operationId": "updatePasskey",
+    "tags": [
+     "Passkeys"
+    ]
+   }
+  },
+  "/people": {
+   "delete": {
+    "operationId": "deletePeople",
+    "tags": [
+     "People"
+    ]
+   },
+   "get": {
+    "operationId": "getAllPeople",
+    "tags": [
+     "People"
+    ]
+   },
+   "post": {
+    "operationId": "createPerson",
+    "tags": [
+     "People"
+    ]
+   },
+   "put": {
+    "operationId": "updatePeople",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/people/merge": {
+   "post": {
+    "operationId": "mergePeople",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/people/users": {
+   "delete": {
+    "operationId": "removeUsersFromPeople",
+    "tags": [
+     "People"
+    ]
+   },
+   "get": {
+    "operationId": "getUsersForPeople",
+    "tags": [
+     "People"
+    ]
+   },
+   "put": {
+    "operationId": "upsertPeopleUsers",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/people/{id}": {
+   "delete": {
+    "operationId": "deletePerson",
+    "tags": [
+     "People"
+    ]
+   },
+   "get": {
+    "operationId": "getPerson",
+    "tags": [
+     "People"
+    ]
+   },
+   "put": {
+    "operationId": "updatePerson",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/people/{id}/merge": {
+   "post": {
+    "operationId": "mergePersonLegacy",
+    "tags": [
+     "People",
+     "Deprecated"
+    ]
+   }
+  },
+  "/people/{id}/reassign": {
+   "put": {
+    "operationId": "reassignFaces",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/people/{id}/statistics": {
+   "get": {
+    "operationId": "getPersonStatistics",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/people/{id}/thumbnail": {
+   "get": {
+    "operationId": "getPersonThumbnail",
+    "tags": [
+     "People"
+    ]
+   }
+  },
+  "/plugins": {
+   "get": {
+    "operationId": "searchPlugins",
+    "tags": [
+     "Plugins"
+    ]
+   }
+  },
+  "/plugins/methods": {
+   "get": {
+    "operationId": "searchPluginMethods",
+    "tags": [
+     "Plugins"
+    ]
+   }
+  },
+  "/plugins/templates": {
+   "get": {
+    "operationId": "searchPluginTemplates",
+    "tags": [
+     "Plugins"
+    ]
+   }
+  },
+  "/plugins/{id}": {
+   "get": {
+    "operationId": "getPlugin",
+    "tags": [
+     "Plugins"
+    ]
+   }
+  },
+  "/public/config": {
+   "get": {
+    "operationId": "getPublicConfig",
+    "tags": [
+     "Config (public)"
+    ]
+   }
+  },
+  "/public/config/defaults": {
+   "get": {
+    "operationId": "getPublicConfigDefaults",
+    "tags": [
+     "Config (public)"
+    ]
+   }
+  },
+  "/queues": {
+   "get": {
+    "operationId": "getQueues",
+    "tags": [
+     "Queues"
+    ]
+   }
+  },
+  "/queues/{name}": {
+   "get": {
+    "operationId": "getQueue",
+    "tags": [
+     "Queues"
+    ]
+   },
+   "put": {
+    "operationId": "updateQueue",
+    "tags": [
+     "Queues"
+    ]
+   }
+  },
+  "/queues/{name}/jobs": {
+   "delete": {
+    "operationId": "emptyQueue",
+    "tags": [
+     "Queues"
+    ]
+   },
+   "get": {
+    "operationId": "getQueueJobs",
+    "tags": [
+     "Queues"
+    ]
+   }
+  },
+  "/search/cities": {
+   "get": {
+    "operationId": "getAssetsByCity",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/explore": {
+   "get": {
+    "operationId": "getExploreData",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/large-assets": {
+   "post": {
+    "operationId": "searchLargeAssets",
+    "tags": [
+     "Search",
+     "Deprecated"
+    ]
+   }
+  },
+  "/search/metadata": {
+   "post": {
+    "operationId": "searchAssets",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/person": {
+   "get": {
+    "operationId": "searchPerson",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/places": {
+   "get": {
+    "operationId": "searchPlaces",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/random": {
+   "post": {
+    "operationId": "searchRandom",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/smart": {
+   "post": {
+    "operationId": "searchSmart",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/statistics": {
+   "post": {
+    "operationId": "searchAssetStatistics",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/search/suggestions": {
+   "get": {
+    "operationId": "getSearchSuggestions",
+    "tags": [
+     "Search"
+    ]
+   }
+  },
+  "/server/about": {
+   "get": {
+    "operationId": "getAboutInfo",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/apk-links": {
+   "get": {
+    "operationId": "getApkLinks",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/config": {
+   "get": {
+    "operationId": "getServerConfig",
+    "tags": [
+     "Server",
+     "Deprecated"
+    ]
+   }
+  },
+  "/server/features": {
+   "get": {
+    "operationId": "getServerFeatures",
+    "tags": [
+     "Server",
+     "Deprecated"
+    ]
+   }
+  },
+  "/server/license": {
+   "delete": {
+    "operationId": "deleteServerLicense",
+    "tags": [
+     "Server"
+    ]
+   },
+   "get": {
+    "operationId": "getServerLicense",
+    "tags": [
+     "Server"
+    ]
+   },
+   "put": {
+    "operationId": "setServerLicense",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/media-types": {
+   "get": {
+    "operationId": "getSupportedMediaTypes",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/ping": {
+   "get": {
+    "operationId": "pingServer",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/statistics": {
+   "get": {
+    "operationId": "getServerStatistics",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/storage": {
+   "get": {
+    "operationId": "getStorage",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/version": {
+   "get": {
+    "operationId": "getServerVersion",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/version-check": {
+   "get": {
+    "operationId": "getVersionCheck",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/server/version-history": {
+   "get": {
+    "operationId": "getVersionHistory",
+    "tags": [
+     "Server"
+    ]
+   }
+  },
+  "/sessions": {
+   "delete": {
+    "operationId": "deleteAllSessions",
+    "tags": [
+     "Sessions"
+    ]
+   },
+   "get": {
+    "operationId": "getSessions",
+    "tags": [
+     "Sessions"
+    ]
+   },
+   "post": {
+    "operationId": "createSession",
+    "tags": [
+     "Sessions"
+    ]
+   }
+  },
+  "/sessions/{id}": {
+   "delete": {
+    "operationId": "deleteSession",
+    "tags": [
+     "Sessions"
+    ]
+   },
+   "put": {
+    "operationId": "updateSession",
+    "tags": [
+     "Sessions"
+    ]
+   }
+  },
+  "/sessions/{id}/lock": {
+   "post": {
+    "operationId": "lockSession",
+    "tags": [
+     "Sessions"
+    ]
+   }
+  },
+  "/shared-links": {
+   "get": {
+    "operationId": "getAllSharedLinks",
+    "tags": [
+     "Shared links"
+    ]
+   },
+   "post": {
+    "operationId": "createSharedLink",
+    "tags": [
+     "Shared links"
+    ]
+   }
+  },
+  "/shared-links/login": {
+   "post": {
+    "operationId": "sharedLinkLogin",
+    "tags": [
+     "Shared links"
+    ]
+   }
+  },
+  "/shared-links/me": {
+   "get": {
+    "operationId": "getMySharedLink",
+    "tags": [
+     "Shared links"
+    ]
+   }
+  },
+  "/shared-links/{id}": {
+   "delete": {
+    "operationId": "removeSharedLink",
+    "tags": [
+     "Shared links"
+    ]
+   },
+   "get": {
+    "operationId": "getSharedLinkById",
+    "tags": [
+     "Shared links"
+    ]
+   },
+   "patch": {
+    "operationId": "updateSharedLink",
+    "tags": [
+     "Shared links"
+    ]
+   }
+  },
+  "/shared-links/{id}/assets": {
+   "delete": {
+    "operationId": "removeSharedLinkAssets",
+    "tags": [
+     "Shared links"
+    ]
+   },
+   "put": {
+    "operationId": "addSharedLinkAssets",
+    "tags": [
+     "Shared links"
+    ]
+   }
+  },
+  "/stacks": {
+   "delete": {
+    "operationId": "deleteStacks",
+    "tags": [
+     "Stacks"
+    ]
+   },
+   "get": {
+    "operationId": "searchStacks",
+    "tags": [
+     "Stacks"
+    ]
+   },
+   "post": {
+    "operationId": "createStack",
+    "tags": [
+     "Stacks"
+    ]
+   }
+  },
+  "/stacks/{id}": {
+   "delete": {
+    "operationId": "deleteStack",
+    "tags": [
+     "Stacks"
+    ]
+   },
+   "get": {
+    "operationId": "getStack",
+    "tags": [
+     "Stacks"
+    ]
+   },
+   "put": {
+    "operationId": "updateStack",
+    "tags": [
+     "Stacks"
+    ]
+   }
+  },
+  "/stacks/{id}/assets/{assetId}": {
+   "delete": {
+    "operationId": "removeAssetFromStack",
+    "tags": [
+     "Stacks"
+    ]
+   }
+  },
+  "/sync/ack": {
+   "delete": {
+    "operationId": "deleteSyncAck",
+    "tags": [
+     "Sync"
+    ]
+   },
+   "get": {
+    "operationId": "getSyncAck",
+    "tags": [
+     "Sync"
+    ]
+   },
+   "post": {
+    "operationId": "sendSyncAck",
+    "tags": [
+     "Sync"
+    ]
+   }
+  },
+  "/sync/stream": {
+   "post": {
+    "operationId": "getSyncStream",
+    "tags": [
+     "Sync"
+    ]
+   }
+  },
+  "/system-config": {
+   "get": {
+    "operationId": "getConfig",
+    "tags": [
+     "System config",
+     "Deprecated"
+    ]
+   },
+   "put": {
+    "operationId": "updateConfig",
+    "tags": [
+     "System config",
+     "Deprecated"
+    ]
+   }
+  },
+  "/system-config/defaults": {
+   "get": {
+    "operationId": "getConfigDefaults",
+    "tags": [
+     "System config",
+     "Deprecated"
+    ]
+   }
+  },
+  "/system-config/storage-template-options": {
+   "get": {
+    "operationId": "getStorageTemplateOptions",
+    "tags": [
+     "System config"
+    ]
+   }
+  },
+  "/system-metadata/admin-onboarding": {
+   "get": {
+    "operationId": "getAdminOnboarding",
+    "tags": [
+     "System metadata"
+    ]
+   },
+   "post": {
+    "operationId": "updateAdminOnboarding",
+    "tags": [
+     "System metadata"
+    ]
+   }
+  },
+  "/system-metadata/reverse-geocoding-state": {
+   "get": {
+    "operationId": "getReverseGeocodingState",
+    "tags": [
+     "System metadata"
+    ]
+   }
+  },
+  "/system-metadata/version-check-state": {
+   "get": {
+    "operationId": "getVersionCheckState",
+    "tags": [
+     "System metadata"
+    ]
+   }
+  },
+  "/tags": {
+   "get": {
+    "operationId": "getAllTags",
+    "tags": [
+     "Tags"
+    ]
+   },
+   "post": {
+    "operationId": "createTag",
+    "tags": [
+     "Tags"
+    ]
+   },
+   "put": {
+    "operationId": "upsertTags",
+    "tags": [
+     "Tags"
+    ]
+   }
+  },
+  "/tags/assets": {
+   "put": {
+    "operationId": "bulkTagAssets",
+    "tags": [
+     "Tags"
+    ]
+   }
+  },
+  "/tags/{id}": {
+   "delete": {
+    "operationId": "deleteTag",
+    "tags": [
+     "Tags"
+    ]
+   },
+   "get": {
+    "operationId": "getTagById",
+    "tags": [
+     "Tags"
+    ]
+   },
+   "put": {
+    "operationId": "updateTag",
+    "tags": [
+     "Tags"
+    ]
+   }
+  },
+  "/tags/{id}/assets": {
+   "delete": {
+    "operationId": "untagAssets",
+    "tags": [
+     "Tags"
+    ]
+   },
+   "put": {
+    "operationId": "tagAssets",
+    "tags": [
+     "Tags"
+    ]
+   }
+  },
+  "/timeline/bucket": {
+   "get": {
+    "operationId": "getTimeBucket",
+    "tags": [
+     "Timeline"
+    ]
+   }
+  },
+  "/timeline/buckets": {
+   "get": {
+    "operationId": "getTimeBuckets",
+    "tags": [
+     "Timeline"
+    ]
+   }
+  },
+  "/trash/empty": {
+   "post": {
+    "operationId": "emptyTrash",
+    "tags": [
+     "Trash"
+    ]
+   }
+  },
+  "/trash/restore": {
+   "post": {
+    "operationId": "restoreTrash",
+    "tags": [
+     "Trash"
+    ]
+   }
+  },
+  "/trash/restore/assets": {
+   "post": {
+    "operationId": "restoreAssets",
+    "tags": [
+     "Trash"
+    ]
+   }
+  },
+  "/users": {
+   "get": {
+    "operationId": "searchUsers",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/me": {
+   "get": {
+    "operationId": "getMyUser",
+    "tags": [
+     "Users"
+    ]
+   },
+   "put": {
+    "operationId": "updateMyUser",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/me/calendar-heatmap": {
+   "get": {
+    "operationId": "getMyCalendarHeatmap",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/me/license": {
+   "delete": {
+    "operationId": "deleteUserLicense",
+    "tags": [
+     "Users"
+    ]
+   },
+   "get": {
+    "operationId": "getUserLicense",
+    "tags": [
+     "Users"
+    ]
+   },
+   "put": {
+    "operationId": "setUserLicense",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/me/onboarding": {
+   "delete": {
+    "operationId": "deleteUserOnboarding",
+    "tags": [
+     "Users"
+    ]
+   },
+   "get": {
+    "operationId": "getUserOnboarding",
+    "tags": [
+     "Users"
+    ]
+   },
+   "put": {
+    "operationId": "setUserOnboarding",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/me/preferences": {
+   "get": {
+    "operationId": "getMyPreferences",
+    "tags": [
+     "Users"
+    ]
+   },
+   "put": {
+    "operationId": "updateMyPreferences",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/profile-image": {
+   "delete": {
+    "operationId": "deleteProfileImage",
+    "tags": [
+     "Users"
+    ]
+   },
+   "post": {
+    "operationId": "createProfileImage",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/{id}": {
+   "get": {
+    "operationId": "getUser",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/users/{id}/profile-image": {
+   "get": {
+    "operationId": "getProfileImage",
+    "tags": [
+     "Users"
+    ]
+   }
+  },
+  "/view/folder": {
+   "get": {
+    "operationId": "getAssetsByOriginalPath",
+    "tags": [
+     "Views"
+    ]
+   }
+  },
+  "/view/folder/unique-paths": {
+   "get": {
+    "operationId": "getUniqueOriginalPaths",
+    "tags": [
+     "Views"
+    ]
+   }
+  },
+  "/workflows": {
+   "get": {
+    "operationId": "searchWorkflows",
+    "tags": [
+     "Workflows"
+    ]
+   },
+   "post": {
+    "operationId": "createWorkflow",
+    "tags": [
+     "Workflows"
+    ]
+   }
+  },
+  "/workflows/triggers": {
+   "get": {
+    "operationId": "getWorkflowTriggers",
+    "tags": [
+     "Workflows"
+    ]
+   }
+  },
+  "/workflows/{id}": {
+   "delete": {
+    "operationId": "deleteWorkflow",
+    "tags": [
+     "Workflows"
+    ]
+   },
+   "get": {
+    "operationId": "getWorkflow",
+    "tags": [
+     "Workflows"
+    ]
+   },
+   "put": {
+    "operationId": "updateWorkflow",
+    "tags": [
+     "Workflows"
+    ]
+   }
+  },
+  "/workflows/{id}/logs": {
+   "get": {
+    "operationId": "getWorkflowLogs",
+    "tags": [
+     "Workflows"
+    ]
+   }
+  },
+  "/workflows/{id}/share": {
+   "get": {
+    "operationId": "getWorkflowForShare",
+    "tags": [
+     "Workflows"
+    ]
+   }
+  }
+ }
+}
